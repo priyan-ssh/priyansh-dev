@@ -5,7 +5,7 @@ export function Footer() {
         <footer className="border-t border-white/10 bg-background py-12">
             <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex flex-col gap-2">
-                    <span className="font-heading font-bold text-xl text-foreground">Priyansh.dev</span>
+                    <span className="font-heading font-bold text-xl text-foreground">priyanssh.dev</span>
                     <p className="text-sm text-muted-foreground">
                         Building digital experiences that matter.
                     </p>
@@ -26,9 +26,9 @@ export function Footer() {
                     </a>
                 </div>
 
-                <p className="text-sm text-muted-foreground">
-                    © {new Date().getFullYear()} Priyansh Soniya. All rights reserved.
-                </p>
+                <div className="text-center text-sm text-muted-foreground">
+                    &copy; {new Date().getFullYear()} priyanssh.dev. All rights reserved.
+                </div>
             </div>
         </footer>
     );

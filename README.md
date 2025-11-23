@@ -1,75 +1,79 @@
-# React + TypeScript + Vite
+# 🟩 Terminal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> "Wake up, Neo..."
 
-Currently, two official plugins are available:
+A high-performance, immersive **Terminal Portfolio** website inspired by *The Matrix*. Built with modern web technologies to deliver a nostalgic yet premium command-line experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Terminal Demo](file:///home/priyansh/.gemini/antigravity/brain/1860e13d-154e-44d2-ba6b-f981b85b068a/portfolio_demo_retry_1763910658554.webp)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **🖥️ Command Line Interface**: Navigate the site by typing commands like `help`, `about`, `projects`, and `contact`.
+- **🟩 Matrix Aesthetic**: Authentic CRT scanlines, flicker effects, and a custom "Matrix Green" color palette.
+- **⌨️ Autocomplete**: Press `Tab` to auto-complete commands for a true terminal feel.
+- **📝 Interactive Forms**: A CLI-style step-by-step contact form.
+- **🎨 ASCII Art**: Retro ASCII borders and tables for displaying content.
+- **🚀 High Performance**: Built with Vite and React 19 for instant load times.
 
-Note: This will impact Vite dev & build performances.
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Framework**: [React 19](https://react.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js (v20 or later recommended)
+- pnpm (recommended) or npm/yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/priyan-ssh/Shell_Portfolio.git
+    cd Shell_Portfolio
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2.  Install dependencies:
+    ```bash
+    pnpm install
+    ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3.  Start the development server:
+    ```bash
+    pnpm run dev
+    ```
+
+4.  Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## 🌐 Deployment
+
+### GitHub Pages with Custom Domain
+
+This project is configured to deploy automatically to GitHub Pages using GitHub Actions.
+
+**Configuration Files:**
+- **Workflow**: `.github/workflows/deploy.yml` (Builds and deploys on push to `main`)
+- **Domain**: `public/CNAME` (Contains your custom domain `priyanssh.dev`)
+
+### DNS Configuration (Porkbun)
+
+To point your domain `priyanssh.dev` to this portfolio:
+
+1.  **A Records** (Host: `@`):
+    *   `185.199.108.153`
+    *   `185.199.109.153`
+    *   `185.199.110.153`
+    *   `185.199.111.153`
+2.  **CNAME Record** (Host: `www`):
+    *   Target: `priyan-ssh.github.io`
+
+*Note: DNS propagation can take up to 24 hours.*
+
+## 📄 License
+
+MIT © [Priyansh Soniya](https://priyanssh.dev)

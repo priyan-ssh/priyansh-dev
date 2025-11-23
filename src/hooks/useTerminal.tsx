@@ -15,6 +15,8 @@ interface InteractiveSession {
   onInput: (input: string, session: InteractiveSession) => InteractiveSession | null; // Return null to end session
 }
 
+const availableCommands = ['help', 'about', 'projects', 'contact', 'clear'];
+
 export const useTerminal = () => {
   const [history, setHistory] = useState<TerminalEntry[]>([]);
   const [input, setInput] = useState('');
@@ -29,8 +31,6 @@ export const useTerminal = () => {
   const clearHistory = useCallback(() => {
     setHistory([]);
   }, []);
-
-  const availableCommands = ['help', 'about', 'projects', 'contact', 'clear'];
 
   const handleAutocomplete = useCallback(() => {
     if (!input.trim()) return;
@@ -106,25 +106,6 @@ export const useTerminal = () => {
         clearHistory();
         break;
       default:
-        // Other commands are handled by the consumer via the returned executeCommand
-        // But wait, the consumer calls THIS executeCommand.
-        // We need a way to let the App.tsx handle the specific page commands if we don't handle them here.
-        // OR we handle them here if we move the logic back.
-        // For now, we'll just let the default case fall through and the App.tsx logic will handle it?
-        // No, App.tsx calls this function.
-        // So we should return the command type or something?
-        // Actually, the previous implementation relied on App.tsx overriding the handler or checking the command.
-        // But App.tsx calls `executeCommand` from the hook.
-        // If we want App.tsx to handle 'about', 'projects', etc., we need to expose a way to register handlers or just return the parsed command.
-
-        // Let's stick to the pattern: This hook handles generic terminal logic.
-        // Specific commands like 'about' need to be intercepted by the caller BEFORE calling this executeCommand,
-        // OR this executeCommand needs to accept a callback for unknown commands.
-
-        // Refactor: The App.tsx handles the command parsing and calls logic.
-        // BUT, we want the hook to manage the history and state.
-        // So, let's make `executeCommand` accept an optional `onUnknown` callback?
-        // Or better, let's just export a `processCommand` that does the history stuff, and let the user decide what to do.
         break;
     }
   }, [addToHistory, clearHistory, interactiveSession]);

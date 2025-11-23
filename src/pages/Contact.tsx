@@ -16,7 +16,7 @@ const Contact = () => {
 
                     <div className="grid grid-cols-[100px_1fr] gap-2">
                         <span className="text-primary font-bold">Email:</span>
-                        <a href="mailto:hello@priyansh.dev" className="hover:underline">hello@priyansh.dev</a>
+                        <a href="mailto:hello@priyanssh.dev" className="hover:underline">hello@priyanssh.dev</a>
 
                         <span className="text-primary font-bold">GitHub:</span>
                         <a href="https://github.com/priyansh" target="_blank" rel="noopener noreferrer" className="hover:underline">github.com/priyansh</a>

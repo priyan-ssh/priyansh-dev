@@ -11,7 +11,7 @@ export function CommandOutput({ history }: CommandOutputProps) {
                 <div key={index} className="break-words">
                     {entry.type === 'command' ? (
                         <div className="flex items-center gap-2">
-                            <span className="text-primary font-bold whitespace-nowrap">visitor@priyansh.dev:~$</span>
+                            <span className="text-green-500 font-bold whitespace-nowrap">visitor@priyanssh.dev:~$</span>
                             <span>{entry.content}</span>
                         </div>
                     ) : (

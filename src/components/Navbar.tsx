@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'wouter';
 import { useState, useEffect } from 'react';
 import { Menu, X, Code2 } from 'lucide-react';
-import { cn } from './Button';
+import { cn } from '../lib/utils';
 
 const navItems = [
     { label: 'Home', href: '/' },
@@ -34,7 +34,7 @@ export function Navbar() {
                 <Link href="/">
                     <a className="flex items-center gap-2 font-heading font-bold text-xl text-foreground hover:text-primary transition-colors">
                         <Code2 className="w-8 h-8 text-primary" />
-                        <span>Priyansh.dev</span>
+                        <span>priyanssh.dev</span>
                     </a>
                 </Link>
 

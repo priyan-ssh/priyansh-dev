@@ -107,7 +107,7 @@ function App() {
   };
 
   const getPrompt = () => {
-    if (!interactiveSession?.isActive) return 'visitor@priyansh.dev:~$';
+    if (!interactiveSession?.isActive) return 'visitor@priyanssh.dev:~$';
     switch (interactiveSession.stepId) {
       case 'name': return 'Name:';
       case 'email': return 'Email:';
@@ -120,7 +120,7 @@ function App() {
     <Layout>
       <div className="max-w-4xl mx-auto w-full">
         <div className="mb-8 font-mono text-sm md:text-base">
-          <p>Welcome to Priyansh.dev Terminal [Version 1.0.0]</p>
+          <p>Welcome to priyanssh.dev Terminal [Version 1.0.0]</p>
           <p>(c) 2025 Priyansh Soniya. All rights reserved.</p>
           <br />
           <p>Type <span className="text-primary font-bold">'help'</span> to see available commands.</p>

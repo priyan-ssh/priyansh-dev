@@ -6,47 +6,44 @@ A high-performance, immersive **Terminal Portfolio** website inspired by *The Ma
 
 ![Terminal Demo](file:///home/priyansh/.gemini/antigravity/brain/1860e13d-154e-44d2-ba6b-f981b85b068a/portfolio_demo_retry_1763910658554.webp)
 
-## ✨ Features
+# Terminal Portfolio
 
-- **🖥️ Command Line Interface**: Navigate the site by typing commands like `help`, `about`, `projects`, and `contact`.
-- **🟩 Matrix Aesthetic**: Authentic CRT scanlines, flicker effects, and a custom "Matrix Green" color palette.
-- **⌨️ Autocomplete**: Press `Tab` to auto-complete commands for a true terminal feel.
-- **📝 Interactive Forms**: A CLI-style step-by-step contact form.
-- **🎨 ASCII Art**: Retro ASCII borders and tables for displaying content.
-- **🚀 High Performance**: Built with Vite and React 19 for instant load times.
+A developer portfolio website featuring a fully interactive terminal interface, built with React, TypeScript, and Vite.
 
-## 🛠️ Tech Stack
+## Features
 
-- **Framework**: [React 19](https://react.dev/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Interactive Terminal**: Full command-line interface with history, autocomplete, and typing animations.
+- **View System**: Seamless navigation between Home, About, Projects, and Contact views using `cd` commands.
+- **Project Details**: Deep dive into projects with `cd projects/<id>`, featuring simulated data loading and terminal-style rendering.
+- **Nested Navigation**: Support for direct path navigation (e.g., `cd projects/chat-app`).
+- **Custom Theming**: CRT effects, matrix rain boot sequence, and strict terminal aesthetics.
+- **Responsive Design**: Optimized for both desktop and mobile terminal experiences.
 
-## 🚀 Getting Started
+## Tech Stack
 
-### Prerequisites
+- **Framework**: React + Vite
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Routing**: Wouter (simulated via state)
+- **Icons**: Lucide React
 
-- Node.js (v20 or later recommended)
-- pnpm (recommended) or npm/yarn
+## Getting Started
 
-### Installation
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/priyan-ssh/Shell_Portfolio.git
-    cd Shell_Portfolio
-    ```
+2. Run development server:
+   ```bash
+   npm run dev
+   ```
 
-2.  Install dependencies:
-    ```bash
-    pnpm install
-    ```
-
-3.  Start the development server:
-    ```bash
-    pnpm run dev
-    ```
+3. Build for production:
+   ```bash
+   npm run build
+   ```
 
 4.  Open [http://localhost:5173](http://localhost:5173) in your browser.
 

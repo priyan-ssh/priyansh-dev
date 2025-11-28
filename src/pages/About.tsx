@@ -1,34 +1,6 @@
 import { AsciiFrame } from '../components/AsciiFrame';
 import { motion } from 'framer-motion';
-
-const experience = [
-    {
-        year: '2023 - Present',
-        role: 'Senior Full Stack Developer',
-        company: 'Tech Solutions Inc.',
-        description: 'Leading development of enterprise cloud applications.',
-    },
-    {
-        year: '2021 - 2023',
-        role: 'Full Stack Developer',
-        company: 'Digital Innovations',
-        description: 'Built scalable microservices and React frontends.',
-    },
-    {
-        year: '2019 - 2021',
-        role: 'Junior Developer',
-        company: 'StartUp Hub',
-        description: 'Collaborated on MVP development for various clients.',
-    },
-];
-
-const education = [
-    {
-        year: '2015 - 2019',
-        degree: 'B.S. Computer Science',
-        school: 'University of Technology',
-    },
-];
+import { CONTENT } from '../data/config';
 
 const About = () => {
     return (
@@ -43,7 +15,7 @@ const About = () => {
 
             <AsciiFrame title="EXPERIENCE_LOG">
                 <div className="space-y-6">
-                    {experience.map((job, index) => (
+                    {CONTENT.experience.map((job, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, x: -20 }}
@@ -61,9 +33,23 @@ const About = () => {
                 </div>
             </AsciiFrame>
 
+            <AsciiFrame title="TECHNICAL_EXPERTISE">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {CONTENT.skills.map((skill, index) => (
+                        <div key={index} className="border border-primary/20 p-3 rounded bg-primary/5">
+                            <div className="flex items-center gap-2 mb-2 text-primary font-bold">
+                                <skill.icon className="w-4 h-4" />
+                                <span>{skill.title}</span>
+                            </div>
+                            <p className="text-sm text-muted-foreground">{skill.desc}</p>
+                        </div>
+                    ))}
+                </div>
+            </AsciiFrame>
+
             <AsciiFrame title="EDUCATION_DB">
                 <div className="space-y-4">
-                    {education.map((edu, index) => (
+                    {CONTENT.education.map((edu, index) => (
                         <div key={index} className="grid grid-cols-1 md:grid-cols-[150px_1fr] gap-2">
                             <div className="text-primary font-bold">[{edu.year}]</div>
                             <div>

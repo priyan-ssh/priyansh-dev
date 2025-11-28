@@ -2,6 +2,7 @@ import { Link, useLocation } from 'wouter';
 import { useState, useEffect } from 'react';
 import { Menu, X, Code2 } from 'lucide-react';
 import { cn } from '../lib/utils';
+import { SITE_CONFIG, SOCIAL_LINKS } from '../data/config';
 
 const navItems = [
     { label: 'Home', href: '/' },
@@ -34,7 +35,7 @@ export function Navbar() {
                 <Link href="/">
                     <a className="flex items-center gap-2 font-heading font-bold text-xl text-foreground hover:text-primary transition-colors">
                         <Code2 className="w-8 h-8 text-primary" />
-                        <span>priyanssh.dev</span>
+                        <span>{SITE_CONFIG.title}</span>
                     </a>
                 </Link>
 
@@ -53,7 +54,7 @@ export function Navbar() {
                         </Link>
                     ))}
                     <a
-                        href="https://github.com/priyansh"
+                        href={SOCIAL_LINKS.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"

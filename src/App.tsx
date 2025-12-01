@@ -40,8 +40,6 @@ function App() {
               <div className="mt-8 p-4 border border-primary/20 rounded bg-primary/5">
                 <p>Welcome to priyanssh.dev Terminal [Version 1.0.0]</p>
                 <p>(c) 2025 Priyansh Soniya. All rights reserved.</p>
-                <br />
-                <p>Type <span className="text-primary font-bold">'help'</span> to see available commands.</p>
               </div>
             </div>
             <CommandOutput history={history} />
@@ -90,6 +88,7 @@ function App() {
         <div className="mt-4 sticky bottom-0 bg-background/95 backdrop-blur pt-2 pb-1">
           <TerminalInput
             onSubmitCommand={executeCommand}
+            onAutocomplete={setInput}
             prompt={getPrompt()}
             value={input}
             onChange={(e) => setInput(e.target.value)}
